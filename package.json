@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-sandbox",
+  "name": "database-eleventy",
   "version": "1.0.0",
-  "description": "Eleventy elements database to sandbox",
+  "description": "Eleventy elements database list",
   "main": "eleventy.config.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",

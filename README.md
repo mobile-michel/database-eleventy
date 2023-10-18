@@ -1,4 +1,4 @@
-# Eleventy, Liquid & Pico with a responsive navbar & hue variable
+# Eleventy elements database list
 1. Installation
 2. Layout with global data
 3. Install Pico.css with responsive navbar
