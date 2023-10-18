@@ -1,0 +1,223 @@
+[
+    {
+        "category": "Frontmatter",
+        "catDescription": "Frontmatter is the information that comes before the main content of a document. It is often used to describe the document's author and publishing date, and to provide keywords associated with the document.",
+        "items": [
+            {
+                "id": "layout",
+                "idDescription": "Eleventy Layouts are special templates that can be used to wrap other content.",
+                "link": "https://www.11ty.dev/docs/layouts/"
+            },
+            {
+                "id": "title",
+                "idDescription": "Add data in your template front matter.",
+                "link": "https://www.11ty.dev/docs/data-frontmatter/"
+            },
+            {
+                "id": "permalink",
+                "idDescription": "You can customize the default location of templates to the output directory using Eleventy’s permalinks feature.",
+                "link": "https://www.11ty.dev/docs/permalinks/"
+            },
+            {
+                "id": "permalink",
+                "idDescription": "You can customize the default location of templates to the output directory using Eleventy’s permalinks feature.",
+                "note": "With slugify filter: eleventy-elements",
+                "link": "https://www.11ty.dev/docs/permalinks/"
+            },
+            {
+                "id": "dynamicPermalink",
+                "idDescription": "Use the dynamicPermalink option in your front matter to disable this on a per-template basis.",
+                "note": "false",
+                "link": "https://www.11ty.dev/docs/permalinks/#disable-templating-in-permalinks"
+            },
+            {
+                "id": "permalinkBypassOutputDir",
+                "idDescription": "To remap your template’s output to a directory independent of the output directory (--output), use permalinkBypassOutputDir: true in your front matter.",
+                "note": "true",
+                "link": "https://www.11ty.dev/docs/permalinks/#ignore-the-output-directory"
+            },
+            {
+                "id": "tags",
+                "idDescription": "While pagination allows you to iterate over a data set to create multiple templates, a collection allows you to group content in interesting ways. A piece of content can be a part of multiple collections, if you assign the same string value to the tags key in the front matter.",
+                "link": "https://www.11ty.dev/docs/collections/"
+            },
+            {
+                "id": "override:tags",
+                "idDescription": "As of Eleventy 1.0, the Data Cascade is combined using deep data merge by default, which means tags are merged together with tags assigned higher in the data cascade (the Arrays are combined). To redefine tags in the front matter use the override: prefix.",
+                "link": "https://www.11ty.dev/docs/collections/#override-tags"
+            },
+            {
+                "id": "pagination",
+                "idDescription": "Pagination allows you to iterate over a data set and create multiple files from a single template. The input data can be in the form of an array or object defined in your frontmatter or in global data, or you can paginate a collection to make an easily digestible list of your posts.",
+                "note": "data, size, alias, resolve, generatePageOnEmptyData, reverse, filter, addAllPagesToCollections",
+                "link": "https://www.11ty.dev/docs/pagination/"
+            },
+            {
+                "id": "date",
+                "idDescription": "Add a date key to your front matter to override the default date (file creation) and customize how the file is sorted in a collection.",
+                "note": "2023-06-26, Last Modified, Created, git Last Modified, git Created",
+                "link": "https://www.11ty.dev/docs/dates/"
+            },
+            {
+                "id": "eleventyImport.collections",
+                "idDescription": "Use the eleventyImport object to declare any collections you use (data cascade friendly) to inform the relationships for smarter incremental builds. This is an Array of collection names.",
+                "link": "https://www.11ty.dev/docs/collections/#declare-your-collections-for-incremental-builds"
+            },
+            {
+                "id": "eleventyExcludeFromCollections",
+                "idDescription": "In front matter (or further upstream in the data cascade), set the eleventyExcludeFromCollections option to true to opt out of specific pieces of content added to all collections (including collections.all, collections set using tags, or collections added from the Configuration API in your config file). Useful for your RSS feed, sitemap.xml, custom templated .htaccess files, et cetera.",
+                "link": "https://www.11ty.dev/docs/collections/#how-to-exclude-content-from-collections"
+            },
+            {
+                "id": "templateEngineOverride",
+                "idDescription": "templateEngineOverride in the template’s front matter. Should be one templating engine (liquid) or markdown paired with another templating engine (liquid,md).",
+                "link": "https://www.11ty.dev/docs/languages/#overriding-the-template-language"
+            },
+            {
+                "id": "eleventyComputed",
+                "idDescription": "At the end of the Data Cascade you may want to inject Data properties into your data object that are based on other data values. To do that you can use the new eleventyComputed feature.",
+                "link": "https://www.11ty.dev/docs/data-computed/"
+            }
+        ]
+    },
+    {
+        "category": "Data",
+        "catDescription": "Exposed via variables that can be used inside templates and layouts using templating syntax. The data for a given template is aggregated through a process called the data cascade.",
+        "items": [
+            {
+                "id": "content",
+                "idDescription": "In Eleventy, data is merged from multiple different sources before the template is rendered. The data is merged in what Eleventy calls the Data Cascade.",
+                "link": "https://www.11ty.dev/docs/data-cascade/"
+            },
+            {
+                "id": "collections.post",
+                "idDescription": "To reference this collection and make a list of all posts, use the collections object in any template.",
+                "link": "https://www.11ty.dev/docs/collections/#a-blog-example"
+            },
+            {
+                "id": "collections.all",
+                "idDescription": "By default Eleventy puts all of your content (independent of whether or not it has any assigned tags) into the collections.all Collection. This allows you to iterate over all of your content inside of a template.",
+                "link": "https://www.11ty.dev/docs/collections/#the-special-all-collection"
+            },
+            {
+                "id": "post.data.title",
+                "idDescription": "To reference this collection and make a list of all posts, use the collections object in any template.",
+                "note": "With slugify filter: eleventy-elements",
+                "link": "https://www.11ty.dev/docs/collections/#a-blog-example"
+            }
+        ]
+    },
+    {
+        "category": "Page variables",
+        "catDescription": "Exposed via variables that can be used inside templates and layouts using templating syntax. The data for a given template is aggregated through a process called the data cascade.",
+        "items": [
+            {
+                "id": "page.inputPath",
+                "idDescription": "Edit your layout file to add the link. Provide the URL to the base of your repo and use the Eleventy provided {{ page.inputPath }} variable to point to the correct input file. Yes, this will also work with paginated templates.",
+                "link": "https://www.11ty.dev/docs/quicktips/edit-on-github-links/#add-your-link"
+            },
+            {
+                "id": "page.url",
+                "idDescription": "page.url is useful for finding the current page in a collection.",
+                "link": "https://www.11ty.dev/docs/data-eleventy-supplied/"
+            },
+            {
+                "id": "page.fileSlug",
+                "idDescription": "The fileSlug variable is mapped from inputPath, and is useful for creating your own clean permalinks.",
+                "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#fileslug"
+            },
+            {
+                "id": "page.filePathStem",
+                "idDescription": "The filePathStem variable is mapped from inputPath, and is useful if you’ve inherited a project that doesn’t use clean permalinks.",
+                "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#filepathstem"
+            },
+            {
+                "id": "page.date",
+                "idDescription": "The date associated with the page. Defaults to the content’s file created date but can be overridden.",
+                "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#date"
+            },
+            {
+                "id": "inputPath",
+                "idDescription": "The path to the original source file for the template, this will include your input directory path!",
+                "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable"
+            },
+            {
+                "id": "outputPath",
+                "idDescription": "Depends on your output directory (the default is _site). You probably won’t use this: `url` is better. Note: This value will be `false` if `permalink` is set to `false`.",
+                "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable"
+            },
+            {
+                "id": "outputFileExtension",
+                "idDescription": "Useful with `page.filePathStem` when using custom file extensions.",
+                "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable"
+            },
+            {
+                "id": "lang",
+                "idDescription": "The default is the value of `defaultLanguage` passed to the i18n plugin.",
+                "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable"
+            },
+            {
+                "id": "this.page",
+                "idDescription": "The data in page is also available as shortcodes, filters, transforms and linters.",
+                "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#feature-availability"
+            },
+            {
+                "id": "page",
+                "idDescription": "Has information about the current page.",
+                "link": "https://www.11ty.dev/docs/data-eleventy-supplied/"
+            }
+        ]
+    },
+    {
+        "category": "Collection item data structure",
+        "catDescription": "Exposed via variables that can be used inside templates and layouts using templating syntax. The data for a given template is aggregated through a process called the data cascade.",
+        "items": [
+            {
+                "id": "data.title",
+                "idDescription": "all data for this piece of content (includes any data inherited from layouts)",
+                "link": "https://www.11ty.dev/docs/collections/#collection-item-data-structure"
+            },
+            {
+                "id": "data.tags",
+                "idDescription": "all data for this piece of content (includes any data inherited from layouts)",
+                "link": "https://www.11ty.dev/docs/collections/#collection-item-data-structure"
+            },
+            {
+                "id": "data.date",
+                "idDescription": "all data for this piece of content (includes any data inherited from layouts)",
+                "link": "https://www.11ty.dev/docs/collections/#collection-item-data-structure"
+            },
+            {
+                "id": "data.content",
+                "idDescription": "the rendered content of this template. This does not include layout wrappers.",
+                "link": "https://www.11ty.dev/docs/collections/#collection-item-data-structure"
+            }
+        ]
+    },
+    {
+        "category": "Pagination",
+        "catDescription": "Pagination allows you to iterate over a data set and create multiple files from a single template. The input data can be in the form of an array or object defined in your frontmatter or in global data, or you can paginate a collection to make an easily digestible list of your posts.",
+        "items": [
+            {
+                "id": "pagination.items",
+                "idDescription": "Array of current page’s chunk of data.",
+                "link": "https://www.11ty.dev/docs/pagination/"
+            },
+            {
+                "id": "pagination.pages",
+                "idDescription": "Array of all chunks of paginated data (in order).",
+                "link": "https://www.11ty.dev/docs/pagination/"
+            },
+            {
+                "id": "pagination.pageNumber",
+                "idDescription": "current page number, 0 indexed.",
+                "link": "https://www.11ty.dev/docs/pagination/"
+            },
+            {
+                "id": "pageEntry",
+                "idDescription": "Use pageEntry to access the original content.",
+                "link": "https://www.11ty.dev/docs/pagination/nav/#add-first-and-last-links"
+            }
+        ]
+    }
+]
