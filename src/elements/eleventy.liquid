@@ -1,0 +1,15 @@
+---
+title: Eleventy elements
+layout: base
+tags: primary
+---
+
+{% for element in elements %}
+<h2>{{ element.category }}</h2>
+<p>{{ element.catDescription }}</p>
+<ul>
+    {% for item in element.items %}
+    <li><a href="{{ item.link }}">{{ item.id }}</a>: {{ item.idDescription }}</li>
+    {% endfor %}
+</ul>
+{% endfor %}
