@@ -1,7 +1,8 @@
 ---
-title: Eleventy elements
+title: Code example
 layout: base
-tags: primary
+date: 2023-01-03
+tags: [primary, item]
 ---
 
 ## Frontmatter

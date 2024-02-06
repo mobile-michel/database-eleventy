@@ -6,6 +6,7 @@
             {
                 "id": "layout",
                 "idDescription": "Eleventy Layouts are special templates that can be used to wrap other content.",
+                "note": false,
                 "link": "https://www.11ty.dev/docs/layouts/"
             },
             {
@@ -16,24 +17,19 @@
             {
                 "id": "permalink",
                 "idDescription": "You can customize the default location of templates to the output directory using Eleventy’s permalinks feature.",
-                "link": "https://www.11ty.dev/docs/permalinks/"
-            },
-            {
-                "id": "permalink",
-                "idDescription": "You can customize the default location of templates to the output directory using Eleventy’s permalinks feature.",
                 "note": "With slugify filter: eleventy-elements",
                 "link": "https://www.11ty.dev/docs/permalinks/"
             },
             {
                 "id": "dynamicPermalink",
                 "idDescription": "Use the dynamicPermalink option in your front matter to disable this on a per-template basis.",
-                "note": "false",
+                "note": false,
                 "link": "https://www.11ty.dev/docs/permalinks/#disable-templating-in-permalinks"
             },
             {
                 "id": "permalinkBypassOutputDir",
                 "idDescription": "To remap your template’s output to a directory independent of the output directory (--output), use permalinkBypassOutputDir: true in your front matter.",
-                "note": "true",
+                "note": true,
                 "link": "https://www.11ty.dev/docs/permalinks/#ignore-the-output-directory"
             },
             {
@@ -143,17 +139,17 @@
             },
             {
                 "id": "outputPath",
-                "idDescription": "Depends on your output directory (the default is _site). You probably won’t use this: `url` is better. Note: This value will be `false` if `permalink` is set to `false`.",
+                "idDescription": "Depends on your output directory (the default is _site). You probably won’t use this: <code>url</code> is better. Note: This value will be <code>false</code> if <code>permalink</code> is set to <code>false</code>.",
                 "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable"
             },
             {
                 "id": "outputFileExtension",
-                "idDescription": "Useful with `page.filePathStem` when using custom file extensions.",
+                "idDescription": "Useful with <code>page.filePathStem</code> when using custom file extensions.",
                 "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable"
             },
             {
                 "id": "lang",
-                "idDescription": "The default is the value of `defaultLanguage` passed to the i18n plugin.",
+                "idDescription": "The default is the value of <code>defaultLanguage</code> passed to the i18n plugin.",
                 "link": "https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable"
             },
             {
@@ -217,6 +213,47 @@
                 "id": "pageEntry",
                 "idDescription": "Use pageEntry to access the original content.",
                 "link": "https://www.11ty.dev/docs/pagination/nav/#add-first-and-last-links"
+            }
+        ]
+    },
+    {
+        "category": "Cascade",
+        "catDescription": "In Eleventy, data is merged from multiple different sources before the template is rendered. The data is merged in what Eleventy calls the Data Cascade.",
+        "items": [
+            {
+                "id": "computed data",
+                "idDescription": "at the end of the Data Cascade you may want to inject Data properties into your data object that are based on other data values. To do that you can use the new eleventyComputed feature.",
+                "link": "https://www.11ty.dev/docs/data-computed/"
+            },
+            {
+                "id": "page frontmatter",
+                "idDescription": "locally assigned front matter values override things further up the layout chain.",
+                "link": "https://www.11ty.dev/docs/data-frontmatter/"
+            },
+            {
+                "id": "template data files",
+                "idDescription": "specific files of Json or JavaScript data that are paired by name with specific pages.",
+                "link": "https://www.11ty.dev/docs/data-template-dir/"
+            },
+            {
+                "id": "directory data files",
+                "idDescription": "shared between multiple pages in a specific directory in your project.",
+                "link": "https://www.11ty.dev/docs/data-template-dir/"
+            },
+            {
+                "id": "layout frontmatter",
+                "idDescription": "helpful for creating template inheritance features to show different data on each section based on the layout.",
+                "link": "https://www.11ty.dev/docs/layouts/#front-matter-data-in-layouts"
+            },
+            {
+                "id": "configuration API global data",
+                "idDescription": "use the configuration API to add global data to your templates.",
+                "link": "https://www.11ty.dev/docs/data-global-custom/"
+            },
+            {
+                "id": "global data files",
+                "idDescription": "JavaScript or Json files stored by default in the src directory of your project.",
+                "link": "https://www.11ty.dev/docs/data-global/"
             }
         ]
     }

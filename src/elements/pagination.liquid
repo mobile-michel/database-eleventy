@@ -1,0 +1,19 @@
+---
+title: Pagination
+layout: base
+tags: item
+pagination:
+    data: elements[5].items
+    size: 1
+    alias: detail
+permalink: 'pagination/{{ detail.id | slug }}/index.html'
+---
+<ol>
+    {%- for item in detail %}
+    <li>{{ item. }}</li>
+    {% endfor -%}
+</ol>
+
+    {%- for item in elements[5].items %}
+    <a href="/pagination/{{item}}">{{ item.id }}</a> -
+    {% endfor -%}

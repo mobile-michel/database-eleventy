@@ -2,11 +2,11 @@
 title: Data Cascade
 description: Highest to lowest-priority data cascade
 layout: base
-tags: primary
+tags: [item]
 ---
 
 <ul>
-  {% for i in cascade %}
-  <li><a href="{{ i.url }}">{{ i.data }}</a>: {{ i.description }}</li>
+  {% for i in elements[5].items %}
+  <li><a href="{{ i.link }}">{{ i.id }}</a>: {{ i.idDescription }}</li>
   {% endfor %}
 </ul>

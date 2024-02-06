@@ -1,0 +1,21 @@
+---
+title: documentation
+description: Documentation site
+layout: base
+tags: [primary, item]
+pagination:
+    data: collections.documentation
+    size: 4
+permalink: 'documentation/{{ title | slug }}/index.html'
+---
+<ol>
+    {% for post in pagination.page.first[0].template._dataCache.eleventy %}
+    <li>{{ post }}</li>
+    {% endfor %}
+</ol>
+
+<ol>
+    {% for post in doc %}
+    <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% endfor %}
+</ol>

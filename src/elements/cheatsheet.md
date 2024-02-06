@@ -1,7 +1,8 @@
 ---
 title: Cheatsheet
 layout: base
-tags: primary
+date: 2023-01-04
+tags: [primary, item]
 ---
 ## Group Json datas by category
 

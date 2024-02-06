@@ -1,0 +1,15 @@
+---
+title: Catégories
+description: Liste des éléments d'une catégorie
+layout: base
+tags: [item]
+pagination:
+  data: elements
+  size: 10
+---
+
+<ul>
+  {%- for i in elements %}
+  <li><a href="/elements/{{ i.category | slugify }}">{{ i.category }}</a></li>
+  {% endfor -%}
+</ul>
