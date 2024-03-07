@@ -225,7 +225,7 @@
                 "name": "computed data",
                 "file": "at any step of the cascade, declare an eleventyComputed data object.",
                 "idDescription": "Highest precedence. Inject data properties into your data object that are based on other data values with the eleventyComputed feature.",
-                "example": "/blog/blog.11tydata.js, module.exports = { eleventyComputed: { title: data => `${data.title} - My Site` } }",
+                "example": "module.exports = { eleventyComputed: { dataCascade: { id: 'computed data, highest priority.', } } };",
                 "link": "https://www.11ty.dev/docs/data-computed/"
             },
             {
@@ -233,7 +233,7 @@
                 "name": "frontmatter data",
                 "file": "datas inside the frontmatter of the template file.",
                 "idDescription": "locally assigned front matter values override things further up the layout chain.",
-                "example": "--- title: My Title ---",
+                "example": "dataCascade: id: 'template frontmatter, 6th in the cascade.'",
                 "link": "https://www.11ty.dev/docs/data-frontmatter/"
             },
             {
@@ -241,7 +241,7 @@
                 "name": "template & directory specific data files",
                 "file": "JSON & JavaScript files in the same directory & the same name as the template.",
                 "idDescription": "specific files of Json or JavaScript data that are paired by name with specific pages.",
-                "example": "/blog/post1.json or /blog/post1.11tydata.json or /blog/post1.11tydata.js",
+                "example": "{'dataCascade': {'id': 'template data files, 5th in the cascade.'}}",
                 "link": "https://www.11ty.dev/docs/data-template-dir/"
             },
             {
@@ -249,7 +249,7 @@
                 "name": "template & directory specific data files",
                 "file": "JSON & JavaScript files in the directory of the template with the same name as the directory.",
                 "idDescription": "shared between multiple pages in a specific directory in your project.",
-                "example": "/blog/blog.json or /blog/blog.11tydata.json or /blog/blog.11tydata.js",
+                "example": "{ 'dataCascade': { 'id': 'directory data files, 4th in the cascade.'}}",
                 "link": "https://www.11ty.dev/docs/data-template-dir/"
             },
             {
@@ -257,7 +257,7 @@
                 "name": "frontmatter data in layouts",
                 "file": "frontmatter of layout files in the _layouts directory.",
                 "idDescription": "helpful for creating template inheritance features to show different data on each section based on the layout.",
-                "example": "--- title: My Title ---",
+                "example": "dataCascade: id: 'layout frontmatter, 3rd in the cascade.'",
                 "link": "https://www.11ty.dev/docs/layouts/#front-matter-data-in-layouts"
             },
             {
@@ -265,7 +265,7 @@
                 "name": "global data from the configuration API",
                 "file": "JavaScript argument in the eleventy.config.js file.",
                 "idDescription": "use the configuration API to add global data to your templates.",
-                "example": "module.exports = function(eleventyConfig) { eleventyConfig.addGlobalData('myGlobalData', 'someValue'); }",
+                "example": "eleventyConfig.addGlobalData('dataCascade.id', 'config global data, 2nd in the cascade.');",
                 "link": "https://www.11ty.dev/docs/data-global-custom/"
             },
             {
@@ -273,7 +273,7 @@
                 "name": "global data files",
                 "file": "JSON & JavaScript files in the _data directory.",
                 "idDescription": "Weakest precedence. JavaScript or Json files stored by default in the src directory of your project.",
-                "example": "/_data/global.json or /_data/global.js",
+                "example": "{'id': 'global data, first in the cascade'}",
                 "link": "https://www.11ty.dev/docs/data-global/"
             }
         ]
