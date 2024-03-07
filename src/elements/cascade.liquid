@@ -3,10 +3,15 @@ title: Data Cascade
 description: Highest to lowest-priority data cascade
 layout: base
 tags: [item]
+dataCascade:
+  id: "template frontmatter, 6th in the cascade."
 ---
-
 <ul>
   {% for i in elements[5].items %}
-  <li><a href="{{ i.link }}">{{ i.id }}</a>: {{ i.idDescription }}</li>
+  <li><a href="{{ i.link }}">{{ i.id }}</a>: {{ i.idDescription }}
+  <br><strong>Where is the datas</strong>: {{ i.file }}
+  <br><strong>Example</strong>: {{ i.example }}</li>
   {% endfor %}
 </ul>
+<p><em>Cascade example</em>: {{ dataCascade.id }}</p>
+<p>A <a href="https://benmyers.dev/blog/eleventy-data-cascade/">good blog</a> about Eleventy data cascade</p>

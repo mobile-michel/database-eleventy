@@ -221,38 +221,59 @@
         "catDescription": "In Eleventy, data is merged from multiple different sources before the template is rendered. The data is merged in what Eleventy calls the Data Cascade.",
         "items": [
             {
-                "id": "computed data",
-                "idDescription": "at the end of the Data Cascade you may want to inject Data properties into your data object that are based on other data values. To do that you can use the new eleventyComputed feature.",
+                "id": "7. Computed data",
+                "name": "computed data",
+                "file": "at any step of the cascade, declare an eleventyComputed data object.",
+                "idDescription": "Highest precedence. Inject data properties into your data object that are based on other data values with the eleventyComputed feature.",
+                "example": "/blog/blog.11tydata.js, module.exports = { eleventyComputed: { title: data => `${data.title} - My Site` } }",
                 "link": "https://www.11ty.dev/docs/data-computed/"
             },
             {
-                "id": "page frontmatter",
+                "id": "6. Template frontmatter",
+                "name": "frontmatter data",
+                "file": "datas inside the frontmatter of the template file.",
                 "idDescription": "locally assigned front matter values override things further up the layout chain.",
+                "example": "--- title: My Title ---",
                 "link": "https://www.11ty.dev/docs/data-frontmatter/"
             },
             {
-                "id": "template data files",
+                "id": "5. Template data files",
+                "name": "template & directory specific data files",
+                "file": "JSON & JavaScript files in the same directory & the same name as the template.",
                 "idDescription": "specific files of Json or JavaScript data that are paired by name with specific pages.",
+                "example": "/blog/post1.json or /blog/post1.11tydata.json or /blog/post1.11tydata.js",
                 "link": "https://www.11ty.dev/docs/data-template-dir/"
             },
             {
-                "id": "directory data files",
+                "id": "4. Directory data files",
+                "name": "template & directory specific data files",
+                "file": "JSON & JavaScript files in the directory of the template with the same name as the directory.",
                 "idDescription": "shared between multiple pages in a specific directory in your project.",
+                "example": "/blog/blog.json or /blog/blog.11tydata.json or /blog/blog.11tydata.js",
                 "link": "https://www.11ty.dev/docs/data-template-dir/"
             },
             {
-                "id": "layout frontmatter",
+                "id": "3. Layout frontmatter",
+                "name": "frontmatter data in layouts",
+                "file": "frontmatter of layout files in the _layouts directory.",
                 "idDescription": "helpful for creating template inheritance features to show different data on each section based on the layout.",
+                "example": "--- title: My Title ---",
                 "link": "https://www.11ty.dev/docs/layouts/#front-matter-data-in-layouts"
             },
             {
-                "id": "configuration API global data",
+                "id": "2. Config global data",
+                "name": "global data from the configuration API",
+                "file": "JavaScript argument in the eleventy.config.js file.",
                 "idDescription": "use the configuration API to add global data to your templates.",
+                "example": "module.exports = function(eleventyConfig) { eleventyConfig.addGlobalData('myGlobalData', 'someValue'); }",
                 "link": "https://www.11ty.dev/docs/data-global-custom/"
             },
             {
-                "id": "global data files",
-                "idDescription": "JavaScript or Json files stored by default in the src directory of your project.",
+                "id": "1. Global data",
+                "name": "global data files",
+                "file": "JSON & JavaScript files in the _data directory.",
+                "idDescription": "Weakest precedence. JavaScript or Json files stored by default in the src directory of your project.",
+                "example": "/_data/global.json or /_data/global.js",
                 "link": "https://www.11ty.dev/docs/data-global/"
             }
         ]
